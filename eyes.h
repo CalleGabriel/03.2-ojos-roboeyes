@@ -8,8 +8,16 @@
 #define EYES_H
 
 #include <Arduino.h>
+#include <Adafruit_SSD1306.h>
 #include "display.h"
 #include "config.h"
+
+// Declaración anticipada para que la interfaz sea válida aunque la cabecera
+// del display se incluya condicionalmente en algún entorno Arduino.
+class Adafruit_SSD1306;
+
+// La instancia del display se define en otro módulo; aquí solo se declara.
+extern Adafruit_SSD1306 display;
 
 // Arduino.h del ESP32 define DEFAULT como 1 y RoboEyes lo define como 0. Se
 // limpia esa macro (sin uso en el core) para evitar el aviso de redefinicion.
