@@ -18,12 +18,12 @@ Adafruit_SSD1306 display(OLED_WIDTH, OLED_HEIGHT, &Wire, OLED_RESET_PIN);
 
 inline void initDisplay() {
     if (!display.begin(SSD1306_SWITCHCAPVCC, OLED_I2C_ADDRESS)) {
-        Serial.println(F("[DISPLAY] Fallo en la inicializacion SSD1306. Sistema detenido."));
+        Serial.println(F("[DISPLAY] Fallo en la inicializacion SSD1306. Sistema detenido.\r\n"));
         while (true) {
             delay(100);
         }
     }
-    Serial.printf("[DISPLAY] SSD1306 inicializado", 
+    Serial.printf("[DISPLAY] SSD1306 inicializado\r\n", 
                   OLED_WIDTH, OLED_HEIGHT, (I2C_FREQUENCY_HZ / 1000));
 }
 
